@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3E8AEA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#64AE87;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D48849;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="innerGlow">
+      <stop offset="0%" style="stop-color:#64AE87;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background Circle with new gradient -->
+  <circle cx="64" cy="64" r="64" fill="url(#innerGlow)"/>
+  <circle cx="64" cy="64" r="62" fill="none" stroke="url(#grad)" stroke-width="4"/>
+  
+  <!-- Camera Icon with new colors -->
+  <g transform="translate(64, 64)">
+    <!-- Camera body -->
+    <rect x="-20" y="-12" width="40" height="28" rx="4" fill="#3E8AEA" opacity="0.95"/>
+    
+    <!-- Lens circle with mint accent -->
+    <circle cx="0" cy="2" r="10" fill="#64AE87" opacity="0.3"/>
+    <circle cx="0" cy="2" r="6" fill="#64AE87"/>
+    
+    <!-- Flash with orange accent -->
+    <circle cx="12" cy="-6" r="2.5" fill="#D48849"/>
+    
+    <!-- Sparkle accents with new colors -->
+    <path d="M -28 -20 L -26 -18 L -28 -16 L -26 -18 Z" fill="#D48849"/>
+    <path d="M 26 -22 L 28 -20 L 26 -18 L 28 -20 Z" fill="#64AE87"/>
+    <path d="M 24 20 L 26 22 L 24 24 L 26 22 Z" fill="#3E8AEA"/>
+  </g>
+</svg>

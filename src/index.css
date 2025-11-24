@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  body {
+    background-color: #000000;
+    color: #F7F8F8;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(62, 138, 234, 0.4); /* Bright Blue */
+    color: white;
+  }
+  
+  /* Special selection for gradient text */
+  .hero-title-gradient::selection {
+    background: linear-gradient(92.88deg, #3E8AEA 9.16%, #64AE87 43.89%, #D48849 64.72%);
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to bottom right, #fff 30%, #a5a5a5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Hero title with gradient text and special selection */
+  .hero-title-gradient {
+    background: linear-gradient(to bottom, #fff 0%, #fff 60%, rgba(255,255,255,0.4) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-title-gradient::selection {
+    background: linear-gradient(92.88deg, #3E8AEA 9.16%, #64AE87 43.89%, #D48849 64.72%);
+    -webkit-text-fill-color: white;
+    color: white;
+  }
+}
+
+/* Grid animation - subtle movement */
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+.grid-animate {
+  animation: gridMove 20s linear infinite;
+}
+
+/* Enhanced Laser scanning animation - now with bright blue */
+@keyframes laserScan {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.5;
+  }
+}
+
+.laser-scan {
+  animation: laserScan 1.5s ease-in-out infinite;
+}
+
+/* Shimmer effect for placeholder images */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(62, 138, 234, 0.1) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* Animated gradient button - new colors */
+@keyframes shimmerButton {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-shimmer-button {
+  animation: shimmerButton 3s ease infinite;
+}
+
+/* Floating language text animation */
+@keyframes languageFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.language-float {
+  animation: languageFloat 20s ease-in-out infinite;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 174, 135, 0.2); /* Mint green */
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 174, 135, 0.3);
+}
+
+/* Pulse slow animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scan line animation for showcase */
+@keyframes scanLineShowcase {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.scan-line-showcase {
+  animation: scanLineShowcase 2s ease-in-out infinite;
+}
+
+/* Arrow flow animation */
+@keyframes arrowFlow {
+  0%, 100% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 10;
+  }
+}
+
+.arrow-flow {
+  stroke-dasharray: 5 5;
+  animation: arrowFlow 1s linear infinite;
+}
