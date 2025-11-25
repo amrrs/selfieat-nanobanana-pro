@@ -69,7 +69,7 @@ The app will be available at **http://localhost:3000**
 ## 📦 Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite 7
-- **Styling**: Tailwind CSS 4 (Linear-inspired design)
+- **Styling**: Tailwind CSS 4
 - **Animations**: Framer Motion
 - **AI API**: Nano Banana Pro via [@fal-ai/client](https://fal.ai)
 - **Backend**: Express (API proxy for secure key handling)
@@ -78,7 +78,7 @@ The app will be available at **http://localhost:3000**
 
 ## 🎨 Features
 
-- ✨ **Modern UI**: Linear-inspired dark theme with glassmorphism
+- ✨ **Modern UI**: Dark theme with glassmorphism
 - 📸 **Dual Input**: Camera capture or file upload (max 10MB)
 - 🌍 **Multi-Location**: Generate images for up to 2 locations simultaneously
 - 🎯 **AI Generation**: 2 variants per location (4 images total)
@@ -155,7 +155,6 @@ MIT License - Feel free to use this for your projects!
 ## 🙏 Credits
 
 - **AI Model**: [Nano Banana Pro](https://fal.ai/models/fal-ai/nano-banana-pro/edit) by fal.ai
-- **Design Inspiration**: [Linear](https://linear.app)
 
 ---
 
